@@ -8,27 +8,29 @@
 </head>
 <body>
     <script>
-        let str = 'ngonguyengiabao';
-        let arr = str.split('');
-        let kyTuAm = ['a','o','e','u','i'];
+        let str1 = 'ngonguyengiabao';
+        let str2 = 'bbbb';
+        let arr1 = str1.split('');
+        let arr2 = str2.split('')
+        let kyTuAm1 = ['a','o','e','u','i'];
+        function Checkstring(arr,kyTuAm){
         let dem = 0;
         for(let i = 0; i < arr.length; i++){
             for(let j = 0; j < kyTuAm.length; j++){
                 if(arr[i] === kyTuAm[j]){
                     dem ++;
-                    break;
                 }
             }
         }
         if(dem == 0){
-            let kq = false;
-            console.log(kq);
-        }else{
-            let kq = true;
-            console.log(kq);
+            dem = false;
         }
-
-        
+        return dem;
+    }
+    let kq1 = Checkstring(arr1,kyTuAm1);
+    console.log(kq1);
+    let kq2 = Checkstring(arr2,kyTuAm1);
+    console.log(kq2)    
     </script>
 </body>
 </html>
